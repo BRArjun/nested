@@ -100,3 +100,15 @@ If you're interested in contributing to Nested, please read through the project 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file in the repository for more details.
+
+## Screenshots
+![Screenshot from 2025-05-15 18-55-26](https://github.com/user-attachments/assets/6dd30f1e-de68-41ec-80f2-54d97d07fa35)
+
+
+![Screenshot from 2025-05-15 18-55-39](https://github.com/user-attachments/assets/316b3446-18ff-4065-a2c2-eed6a9fe8d2d)
+
+
+![Screenshot from 2025-05-15 18-55-50](https://github.com/user-attachments/assets/5cb905b8-6d4f-401b-948d-5f9eb155bfe1)
+
+
+![Screenshot from 2025-05-15 18-56-01](https://github.com/user-attachments/assets/f3f516db-c572-496a-89d8-18657ae8e73f)
