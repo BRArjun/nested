@@ -88,10 +88,6 @@ Before running the application, You will need Firebase Auth or GCP API credentia
 
 If you're interested in contributing to Nested, please read through the project files and contact the main author to see how you can help.
 
-### Main Author
-
-- **Eesha Moona** - _Initial work_ - [eeshamoona@gmail.com](mailto:eeshamoona@gmail.com)
-
 ## Acknowledgments
 
 - Thanks to all the developers and contributors who made this project possible.
