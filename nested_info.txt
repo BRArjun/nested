@@ -1,0 +1,45 @@
+- A tool that helps you settle into a new city by analyzing your Google Maps Search History & Google Takeout information, to match you with places that fit your lifestyle- like grocery stores, gyms, museums and more.
+
+- I used the following API services:
+	- Firebase API for storage of user data and authentication
+	- Google People API for access to Google contacts and user profiles
+	- Google Maps API for map displays and direction info
+	- Gemini API for the recommendations  
+
+- I made the frontend with:
+	- React, TypeScript and Material UI
+
+- I made the backend with:
+	- Flask and Python
+
+- The backend has been made with the following important Flask APIs:
+	- /get-google-places-info : Calls Google Places API to fetch info about a place near the given address
+	- /get-google-drive-file : Handles file picking and uploading Takeout data via Google Drive
+	- /fetch-people-info : To access the Google People API and fetch profiles and contacts
+	- /generate-content : Gemini generates its recommendations and summaries
+	- /generate-profile : Based on the uploaded Takeout data, set up a user profile using Gemini
+
+- Now about the other important scripts that are run by the server:
+	
+	- file_input_system_instructions.py : 
+		- Save the user uploaded Takeout data into a small .txt file
+		- Initialize the Gemini 1.5 Pro model with this file and a system instruction
+		- If response from Gemini is recieved, sanitize this output and extract the JSON string from Gemini's output
+		- Then store this JSON response in the form of a Python dict
+		- The JSON response has the following params:
+			- title : a concise title for the recommendation
+			- place : name of recommended location
+			- address : full address of the recommended location
+			- personalizedRecommendation : brief desc. of recommendation based on user's specific preferences
+			- recommendationReasoning
+			- confidence : number indicating how confident we are in recommending this place
+			
+	
+	- google_place_info_extractor.py:
+		- Calls Google Places API to get the place_id of the given place
+		- Create a shareable Google Maps link for that place with the given place_id
+		- Calls the Google Place details API to get a photo_reference to display a photo for the place_id
+		- Calls the Distance Matrix API to calculate 2 things:
+			- Distance from home address to this place
+			- Estimated travel time
+		- All of this info is stored in a python dict for fast key value based access
